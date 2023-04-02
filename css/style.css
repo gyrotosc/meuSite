@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.bg1 {
+    background-color:rgb(11, 12, 13) ;
+    width: 100%;
+
+}
+
+.container {
+    margin: 0 auto;
+    width: 980px;
+    position: relative;
+    padding-top: 20px;
+}
+
+header {
+    height: 150px;
+}
+
+#head-site{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#head-site li {
+    display: inline-block;
+    width: 19%;
+}
+
+#logo-site {
+    padding-top: 40px;
+    padding-left: 20px;
+    width: 10%;
+    float: left;
+}
+
+#menu-header {
+    padding-top: 40px;
+    color: #c1c1c1;
+    font-size: larger;
+    width: 70%;
+    text-align: center;
+}
+
+#icones-rede-sociais {
+    float: right;
+    padding-top: 40px;
+    padding-right: 10px;
+    width: 20%;
+}
+
+#icones-rede-sociais img:hover{
+    box-shadow: 0 0 6px white;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+/* Classes para o slider - passador de imagens */
+main {
+    background-color: black;
+    background-image: linear-gradient( to bottom, rgb(11, 12, 13), rgb(31,32,33) );
+}
+
+.slider {
+    margin: 0 auto;
+    height: 400px;
+    width: 800px;
+    overflow: hidden;
+}
+
+.slides {
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+    transition: 3s;
+}
+
+.slide img {
+    width: 800px;
+}
+
+.navegacao-manual {
+    position: absolute;
+    width: 800px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: white;
+}
+
+#radio1:checked~.primeiro{
+    margin-left: 0;
+}
+
+#radio2:checked~.primeiro{
+    margin-left: -25%;
+}
+
+#radio3:checked~.primeiro{
+    margin-left: -50%;
+}
+
+.navegacao-auto div{
+    border: 2px solid cyan;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navegacao-auto {
+    position: absolute;
+    width: 800px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.navegacao-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navegacao-auto .auto-btn1{
+    background-color: white;
+}
+
+
+#radio2:checked ~ .navegacao-auto .auto-btn2{
+    background-color: white;
+}
+
+#radio3:checked ~ .navegacao-auto .auto-btn3{
+    background-color: white;
+}
+
+/* Imagens das seções 'Jogos incriveis...' e 'Streamer parceiros' */
+
+#imagens-9x16 {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 60px;
+    position: relative;
+    transition: all 0.3s linear;
+    max-width: 100%;
+    height: auto;
+}
+
+#imagens-9x16 img {
+    max-width: 200px;
+    height: 300px;
+    border-radius: 12px;
+    transition: all 0.3s linear;
+}
+
+#imagens-9x16 img:hover{
+    box-shadow: 0 0 10px snow;
+    border: solid 2px gray;
+    scale: 1.2;
+}
+
+#icones-streamers {
+    
+    padding: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    transition: all 0.3s linear;
+    position: relative;
+}
+
+#icones-streamers img {
+    border-radius: 100px;
+    transition: all 0.3s linear;
+
+}
+
+#icones-streamers img:hover{
+    box-shadow: 0 0 10px snow;
+    border: solid 2px gray;
+    scale: 1.2;
+}
+
+/* formulario final */
+
+.box {
+    position: relative;
+    top: 50%;
+    left: 34%;
+    display: flex;
+    background-color: rgb(20,147,220);
+    padding: 15px;
+    border-radius: 15px;
+    width: 30%;
+    color: white;
+}
+
+fieldset {
+    border: 3px solid black;
+    padding: 8px;
+}
+
+legend{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
+
+.input-box{
+    position: relative;
+}
+
+.input-user{
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+}
+
+.label-input{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.input-user:focus~.label-input,
+.input-user:valid~.label-input{
+    top: -20px;
+    font-size: 12px;
+    color: black;
+}
+
+#data-nascimento{
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+
+#submit {
+    background-image: linear-gradient(to right, white, rgb(11, 12, 13));
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#submit:hover{
+    background-image: linear-gradient(to right, white, rgb(21, 22, 23));
+}
